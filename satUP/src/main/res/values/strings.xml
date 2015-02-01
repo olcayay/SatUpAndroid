@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SatUP</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_login">Login With Facebook</string>
+    <string name="email_login">Login With E-mail</string>
+    <string name="create_account">Create Account</string>
+    <string name="facebook_register">Register With Facebook</string>
+    <string name="email_register">Register With E-mail</string>
+    <string name="back_to_login">Back To Login</string>
+    <string name="dont_have_account">Do not have an account yet?</string>
+    <string name="why_do_i_need">Why do I need an account?</string>
+    <string name="or">or</string>
+    <string name="login">Login</string>
+    <string name="signout">Sign out</string>
+    <string name="finish">Finish</string>
+    <string name="see_results">See Results</string>
+    <string name="register">Register</string>
+    <string name="email">E-mail</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="error_message_noemail">No E-mail Entered!</string>
+    <string name="error_message_nopassword">No Password Entered!</string>
+    <string name="error_message_nousername">No Username Entered!</string>
+    <string name="create_test">Create Test</string>
+    <string name="finish_line">YOU ARE AT THE FINISH LINE.</string>
+    <string name="test_status">You have 12 unanswered questions</string>
+    <string name="practice_ready">Your personalized practice test is ready.</string>
+    <string name="start_practice">Start Practice</string>
+    <string name="practice_generating">Generating your personalized test.</string>
+    <string name="cancel">Cancel</string>
+    <string name="show_solution">Show Solution</string>
+    <string name="show_question">Show Question</string>
+    <string name="currently_signedin">Currently signed in as </string>
+    <string name="question_number_prompt">Choose Question Number</string>
+    <string name="hide_step">Hide Step</string>
+    <string name="show_step">Show Step</string>
+    
+    <string-array name="question_number_arrays">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+</resources>

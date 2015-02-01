@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3498DB"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.scorebeyond.satup.FirstScreen" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" >
+
+        <ImageView
+            android:id="@+id/logo_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp"
+            android:src="@drawable/header" />
+
+        <Button
+            android:id="@+id/facebook_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_imageview"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundedbutton_darkblue"
+            android:onClick="facebookButtonClicked"
+            android:text="@string/facebook_login"
+            android:textColor="#ffffff" />
+
+        <RelativeLayout
+            android:id="@+id/line_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facebook_login_button" >
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:background="#177BC5" />
+
+            <TextView
+                android:id="@+id/or_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#3498DB"
+                android:padding="5dp"
+                android:text="@string/or"
+                android:textColor="#177BC5" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/email_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_linearlayout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="emailButtonClicked"
+            android:text="@string/email_login"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/dont_have_account_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_login_button"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/dont_have_account"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/create_account_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dont_have_account_textview"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/roundedbutton_white"
+            android:onClick="createAccountButtonClicked"
+            android:text="@string/create_account"
+            android:textColor="#6295BA" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/why_do_i_need_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:text="@string/why_do_i_need"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

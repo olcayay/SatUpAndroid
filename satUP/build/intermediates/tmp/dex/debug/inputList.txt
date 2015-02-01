@@ -1,0 +1,8 @@
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/classes/debug
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-3010e7005ad2abcae755ebc9cd6fcea78c253ef2.jar
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/classes-dc240c04b4834853b292cf6098d12298a8a6e39f.jar
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-c3e257a929cd64df582bd714ff45454dab2e6d94.jar
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/retrofit-1.7.0-8d7d28e5d88ae92b3d91cc6ee9a2d166fe9fc2ca.jar
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/gson-2.3-c31672d7df0a2de8fda1eb444f4c9f2eb788e36f.jar
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/classes-e2ec0ac5c31ed8afe1a955128584df515cd96c92.jar
+/Users/olcayay/AndroidStudioProjects/SatUP/satUP/build/intermediates/pre-dexed/debug/classes-7ab46efa1ae0b032879163f95e5e12775f7cb2ab.jar
