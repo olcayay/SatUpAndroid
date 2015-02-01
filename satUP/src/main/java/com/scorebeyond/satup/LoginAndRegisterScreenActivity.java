@@ -173,7 +173,7 @@
                 }
 
                 @Override
-                public void failure(RetrofitError arg0)
+                public void failure(RetrofitError arg0) {
                 }
             });
         }
