@@ -1,16 +1,7 @@
 package com.scorebeyond.satup;
 
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
-
-import com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivityBase;
 import com.scorebeyond.satup.test.SlidingMenuTestActivity;
 import com.scorebeyond.satup.webservice.RetrofitInterface;
-import com.scorebeyond.satup.webservice.TestRequest;
-import com.scorebeyond.satup.webservice.WebServiceAdapter;
-import com.scorebeyond.satup.webservice.datamodel.Profile;
-import com.scorebeyond.satup.webservice.datamodel.Test;
 import com.scorebeyond.satup.webservice.datamodel.User;
 
 import android.app.Activity;
@@ -25,7 +16,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class LoggedInUserFirstScreenActivity extends Activity{
 
@@ -38,11 +28,11 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
+
 		setContentView(R.layout.activity_loggedin_user_first_screen);
 		retrofitInterface = ((SBApplication)getApplicationContext()).getRetrofitInterface();
 		user = ((SBApplication)getApplicationContext()).getAppUser();
-		
+
 		questionNumberSpinner = (Spinner)findViewById(R.id.question_number_spinner);
 //		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.array.question_number_arrays, R.layout.spinner_item);
 //		questionNumberSpinner.setAdapter(adapter);
@@ -52,7 +42,7 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 	            this, R.array.question_number_arrays, R.layout.spinner_item);
 	adapter.setDropDownViewResource(R.layout.spinner_item);
 	questionNumberSpinner.setAdapter(adapter);
-		
+
 		questionNumberSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 		    @Override
 		    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -62,10 +52,10 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 			@Override
 			public void onNothingSelected(AdapterView<?> parent) {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
-		
+
 		currentlySignedin = (TextView)findViewById(R.id.currently_singedin_testview);
 		currentlySignedin.setText(getResources().getString(R.string.currently_signedin) + " " + user.getUsername());
 	}
@@ -81,12 +71,12 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 		if (dialog != null)
 			dialog.show();
 	}
-	
+
 	public void signout(){
 		((SBApplication)getApplicationContext()).setAppUser(null);
 		returnToLoginScreen();
 	}
-	
+
 	private void returnToLoginScreen() {
 		Intent intent = new Intent(this,FirstScreen.class);
 		startActivity(intent);
@@ -98,15 +88,17 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 		Intent intent = new Intent(this,SlidingMenuTestActivity.class);
 		intent.putExtra("questionNumber", questionNumber);
 		intent.putExtra("testContent", strings);
-		startActivity(intent); 
-		
+		startActivity(intent);
+
 	}
 
-	protected void saveText(Test test) {
+	/*
+    protected void saveText(Test test) {
 		// TODO Auto-generated method stub
 		((SBApplication)getApplicationContext()).setTest(test);
 	}
-	
+    */
+
 	public Dialog createSignoutDialog() {
 		// Use the Builder class for convenient dialog construction
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -1,81 +1,81 @@
-package com.scorebeyond.satup;
+    package com.scorebeyond.satup;
 
-import retrofit.RestAdapter;
-import retrofit.RestAdapter.LogLevel;
-import retrofit.android.AndroidLog;
+    import retrofit.RestAdapter;
+    import retrofit.RestAdapter.LogLevel;
+    import retrofit.android.AndroidLog;
 
-import com.google.gson.Gson;
-import com.scorebeyond.satup.webservice.RetrofitInterface;
-import com.scorebeyond.satup.webservice.datamodel.Test;
-import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
-import com.scorebeyond.satup.webservice.datamodel.User;
+    import com.google.gson.Gson;
+    import com.scorebeyond.satup.webservice.RetrofitInterface;
+    import com.scorebeyond.satup.webservice.datamodel.Test;
+    import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
+    import com.scorebeyond.satup.webservice.datamodel.User;
 
-import android.app.Application;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+    import android.app.Application;
+    import android.content.SharedPreferences;
+    import android.content.SharedPreferences.Editor;
 
-public class SBApplication extends Application {
+    public class SBApplication extends Application {
 
-	private static SBApplication singleton;
-	private User appUser;
-	private RetrofitInterface retrofitInterface;
-	private Test test;
-	private SharedPreferences mPrefs;
-	private TestStatResult testStatResult;
-	
-	public SBApplication getInstance() {
-		return singleton;
-	}
+        private static SBApplication singleton;
+        private User appUser;
+        private RetrofitInterface retrofitInterface;
+        private Test test;
+        private SharedPreferences mPrefs;
+        private TestStatResult testStatResult;
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		singleton = this;
+        public SBApplication getInstance() {
+            return singleton;
+        }
 
-		mPrefs = getSharedPreferences("preferences",
-				MODE_PRIVATE);
-		Gson gson = new Gson();
-		String json = mPrefs.getString("User", "");
-		appUser = gson.fromJson(json, User.class);
+        @Override
+        public void onCreate() {
+            super.onCreate();
+            singleton = this;
 
-		retrofitInterface = new RestAdapter.Builder()
-				.setEndpoint(RetrofitInterface.API_URL)
-				.setLogLevel(LogLevel.FULL).setLog(new AndroidLog("SB"))
-				.build().create(RetrofitInterface.class);
+            mPrefs = getSharedPreferences("preferences",
+                    MODE_PRIVATE);
+            Gson gson = new Gson();
+            String json = mPrefs.getString("User", "");
+            appUser = gson.fromJson(json, User.class);
 
-	}
+            retrofitInterface = new RestAdapter.Builder()
+                    .setEndpoint(RetrofitInterface.API_URL)
+                    .setLogLevel(LogLevel.FULL).setLog(new AndroidLog("SB"))
+                    .build().create(RetrofitInterface.class);
 
-	public User getAppUser() {
-		return appUser;
-	}
+        }
 
-	public void setAppUser(User appUser) {
-		this.appUser = appUser;
+        public User getAppUser() {
+            return appUser;
+        }
 
-		Editor prefsEditor = mPrefs.edit();
-		Gson gson = new Gson();
-		String json = gson.toJson(appUser);
-		prefsEditor.putString("User", json);
-		prefsEditor.commit();
-	}
+        public void setAppUser(User appUser) {
+            this.appUser = appUser;
 
-	public RetrofitInterface getRetrofitInterface() {
-		return retrofitInterface;
-	}
+            Editor prefsEditor = mPrefs.edit();
+            Gson gson = new Gson();
+            String json = gson.toJson(appUser);
+            prefsEditor.putString("User", json);
+            prefsEditor.commit();
+        }
 
-	public Test getTest() {
-		return test;
-	}
+        public RetrofitInterface getRetrofitInterface() {
+            return retrofitInterface;
+        }
 
-	public void setTest(Test test) {
-		this.test = test;
-	}
+        public Test getTest() {
+            return test;
+        }
 
-	public TestStatResult getTestStatResult() {
-		return testStatResult;
-	}
+        public void setTest(Test test) {
+            this.test = test;
+        }
 
-	public void setTestStatResult(TestStatResult testStatResult) {
-		this.testStatResult = testStatResult;
-	}
-}
+        public TestStatResult getTestStatResult() {
+            return testStatResult;
+        }
+
+        public void setTestStatResult(TestStatResult testStatResult) {
+            this.testStatResult = testStatResult;
+        }
+    }

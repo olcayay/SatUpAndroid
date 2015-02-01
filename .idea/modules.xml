@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SatUP.iml" filepath="$PROJECT_DIR$/SatUP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/satUP/SatUp.iml" filepath="$PROJECT_DIR$/satUP/SatUp.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/satUP/satUP.iml" filepath="$PROJECT_DIR$/satUP/satUP.iml" />
     </modules>
   </component>
 </project>

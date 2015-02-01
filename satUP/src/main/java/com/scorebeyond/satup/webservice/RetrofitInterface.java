@@ -14,32 +14,32 @@ import retrofit.http.Path;
 
 public interface RetrofitInterface {
 
-	public static final String API_URL = "http://api.scorebeyond.com";
+    public static final String API_URL = "http://api.scorebeyond.com";
 
-	static RetrofitInterface instance = null;
-	
-	@Headers("Content-Type: application/json")
-	@POST("/v1/account/login")
-	void login(@Body LoginRequest loginInfo, Callback<Response> callback);
+    //static RetrofitInterface instance = null;
 
-	@Headers("Content-Type: application/json")
-	@POST("/v1/account/register")
-	void register(@Body RegisterRequest registerInfo, Callback<Response> callback);
+    @Headers("Content-Type: application/json")
+    @POST("/v1/account/login")
+    void login(@Body LoginRequest loginInfo, Callback<Response> callback);
 
-	@Headers("Content-Type: application/json")
-	@GET("/v1/sat/{user_id}/profile")
-	void createProfile(@Header("X-Token") String security_token, @Path("user_id") String user_id, Callback<Response> callback);
+    @Headers("Content-Type: application/json")
+    @POST("/v1/account/register")
+    void register(@Body RegisterRequest registerInfo, Callback<Response> callback);
 
-	@Headers("Content-Type: application/json")
-	@POST("/v1/sat/{user_id}/test")
-	void createTest(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Body TestRequest testInfo, Callback<Response> callback);
+    @Headers("Content-Type: application/json")
+    @GET("/v1/sat/{user_id}/profile")
+    void createProfile(@Header("X-Token") String security_token, @Path("user_id") String user_id, Callback<Response> callback);
 
-	@Headers("Content-Type: application/json")
-	@PUT("/v1/sat/{user_id}/test/{test_id}")
-	void sendTestResult(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Path("test_id") String test_id, @Body QuestionResultList testResultList, Callback<Response> callback);
+    @Headers("Content-Type: application/json")
+    @POST("/v1/sat/{user_id}/test")
+    void createTest(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Body TestRequest testInfo, Callback<Response> callback);
 
-	@Headers("Content-Type: application/json")
-	@GET("/v1/sat/{user_id}/test/{test_id}/stats")
-	void getTestStat(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Path("test_id") String test_id, Callback<Response> callback);
+    @Headers("Content-Type: application/json")
+    @PUT("/v1/sat/{user_id}/test/{test_id}")
+    void sendTestResult(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Path("test_id") String test_id, @Body QuestionResultList testResultList, Callback<Response> callback);
+
+    @Headers("Content-Type: application/json")
+    @GET("/v1/sat/{user_id}/test/{test_id}/stats")
+    void getTestStat(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Path("test_id") String test_id, Callback<Response> callback);
 
 }

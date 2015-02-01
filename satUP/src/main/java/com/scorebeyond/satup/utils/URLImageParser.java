@@ -14,7 +14,6 @@ import android.os.AsyncTask;
 import android.text.Html.ImageGetter;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
 public class URLImageParser implements ImageGetter {
     Context c;
@@ -34,8 +33,8 @@ public class URLImageParser implements ImageGetter {
         URLDrawable urlDrawable = new URLDrawable();
 
         // get the actual source
-        ImageGetterAsyncTask asyncTask = 
-            new ImageGetterAsyncTask( urlDrawable);
+        ImageGetterAsyncTask asyncTask =
+                new ImageGetterAsyncTask( urlDrawable);
 
         asyncTask.execute(source);
 
@@ -62,13 +61,13 @@ public class URLImageParser implements ImageGetter {
             if ( result != null )
             {
                 // set the correct bound according to the result from HTTP call 
-                Log.d("height",""+result.getIntrinsicHeight()); 
-                Log.d("width",""+result.getIntrinsicWidth()); 
-                urlDrawable.setBounds(0, 0, 0+result.getIntrinsicWidth(), 0+result.getIntrinsicHeight());  
+                Log.d("height",""+result.getIntrinsicHeight());
+                Log.d("width",""+result.getIntrinsicWidth());
+                urlDrawable.setBounds(0, 0, 0+result.getIntrinsicWidth(), 0+result.getIntrinsicHeight());
 
                 // change the reference of the current drawable to the result 
                 // from the HTTP call 
-                urlDrawable.drawable = result; 
+                urlDrawable.drawable = result;
 
                 // redraw the image by invalidating the container 
                 URLImageParser.this.container.invalidate();
@@ -79,7 +78,7 @@ public class URLImageParser implements ImageGetter {
 //
 //                // Pre ICS
 //                URLImageParser.this.container.setEllipsize(null);            	
-            }	
+            }
         }
 
         /***
@@ -91,12 +90,12 @@ public class URLImageParser implements ImageGetter {
             try {
                 InputStream is = fetch(urlString);
                 Drawable drawable = Drawable.createFromStream(is, "src");
-                drawable.setBounds(0, 0, 0 + drawable.getIntrinsicWidth(), 0 
-                        + drawable.getIntrinsicHeight()); 
+                drawable.setBounds(0, 0, 0 + drawable.getIntrinsicWidth(), 0
+                        + drawable.getIntrinsicHeight());
                 return drawable;
             } catch (Exception e) {
                 return null;
-            } 
+            }
         }
 
         private InputStream fetch(String urlString) throws MalformedURLException, IOException {

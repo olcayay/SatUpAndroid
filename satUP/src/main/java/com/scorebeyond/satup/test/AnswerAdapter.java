@@ -1,9 +1,7 @@
 package com.scorebeyond.satup.test;
 
-import java.util.List;
 
 import com.scorebeyond.satup.R;
-import com.scorebeyond.satup.utils.URLImageParser;
 import com.scorebeyond.satup.webservice.datamodel.Answers;
 import com.scorebeyond.satup.webservice.datamodel.Questions;
 
@@ -14,8 +12,6 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
