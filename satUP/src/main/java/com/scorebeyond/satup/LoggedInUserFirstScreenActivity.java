@@ -26,7 +26,6 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_loggedin_user_first_screen);
@@ -51,8 +50,6 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 
 			@Override
 			public void onNothingSelected(AdapterView<?> parent) {
-				// TODO Auto-generated method stub
-
 			}
 		});
 
@@ -83,7 +80,6 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 	}
 
 	protected void gotoTestActivity(int questionNumber, String[] strings) {
-		// TODO Auto-generated method stub
 		//Intent intent = new Intent(this,TestActivity.class);
 		Intent intent = new Intent(this,SlidingMenuTestActivity.class);
 		intent.putExtra("questionNumber", questionNumber);
@@ -94,7 +90,6 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 
 	/*
     protected void saveText(Test test) {
-		// TODO Auto-generated method stub
 		((SBApplication)getApplicationContext()).setTest(test);
 	}
     */

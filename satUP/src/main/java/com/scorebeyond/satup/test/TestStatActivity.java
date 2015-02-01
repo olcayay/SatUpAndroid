@@ -30,7 +30,6 @@ public class TestStatActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_test_stat);
@@ -68,7 +67,6 @@ public class TestStatActivity extends Activity{
 
 
     private void addCardViews(TestStatResult testStatResult) {
-        // TODO Auto-generated method stub
         Cards[] cards = testStatResult.getCards();
 
         //for ( int i = 0; i < cards.length; i++ )
@@ -92,7 +90,6 @@ public class TestStatActivity extends Activity{
 
 
     private void addHorizontalView(Cards card) {
-        // TODO Auto-generated method stub
         View horizantalView = getLayoutInflater().inflate(R.layout.card_type_horizantal, null);
         if ( card.getTitle() != null &&
                 card.getTitle().getText() != null )
@@ -125,7 +122,6 @@ public class TestStatActivity extends Activity{
 
 
     private void addHorizantalSubView(LinearLayout horizantalViewBody, Subcells subcell, int i) {
-        // TODO Auto-generated method stub
         View horizantalItemView = getLayoutInflater().inflate(R.layout.card_type_horizantal_item, null);
 
         TextView titleTextView = (TextView)horizantalItemView.findViewById(R.id.card_title_textview);
@@ -158,7 +154,6 @@ public class TestStatActivity extends Activity{
 
 
     private void addTimeView(Cards card) {
-        // TODO Auto-generated method stub
         View timeView = getLayoutInflater().inflate(R.layout.card_type_time, null);
         if ( card.getTitle() != null &&
                 card.getTitle().getText() != null )
@@ -214,7 +209,6 @@ public class TestStatActivity extends Activity{
 
 
     private void addProgressView(Cards card) {
-        // TODO Auto-generated method stub
         View progressView = getLayoutInflater().inflate(R.layout.card_type_progress, null);
         if ( card.getTitle() != null &&
                 card.getTitle().getText() != null )

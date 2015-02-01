@@ -110,7 +110,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
 				/*
 				if ( bottomLayout.getVisibility() == View.VISIBLE )
 				{	
@@ -272,7 +271,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
     }
 
     private void fillTimeSpentList() {
-        // TODO Auto-generated method stub
         //for (Questions questions : test.getQuestions()) {
         for (int i = 0; i < test.getQuestions().length;i++) {
             timeSpentList.add(0);
@@ -282,7 +280,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
     @Override
     protected void onPause() {
-        // TODO Auto-generated method stub
         super.onPause();
         lastPause = SystemClock.elapsedRealtime();
         testDurationChronometer.stop();
@@ -290,14 +287,12 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
     @Override
     protected void onStop() {
-        // TODO Auto-generated method stub
         super.onStop();
         //testDurationChronometer.stop();
     }
 
     @Override
     protected void onResume() {
-        // TODO Auto-generated method stub
         super.onResume();
 
         if ( test != null )
@@ -308,7 +303,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
     }
 
     private void fillSelectedSelectionList() {
-        // TODO Auto-generated method stub
         //for (Questions questions : test.getQuestions()) {
         for (int i = 0; i < test.getQuestions().length;i++) {
             selectedSelectionList.add(-1);
@@ -446,12 +440,10 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
     }
 
     public void setSelection(int questionIndex, int selection) {
-        // TODO Auto-generated method stub
         selectedSelectionList.set(questionIndex, selection);
     }
 
     public int getSelection(int questionIndex) {
-        // TODO Auto-generated method stub
         return selectedSelectionList.get(questionIndex);
     }
 
@@ -503,7 +495,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
     }
 
     protected void quitFromTest() {
-        // TODO Auto-generated method stub
         finish();
     }
 
@@ -559,7 +550,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
                 @Override
                 public void failure(RetrofitError arg0) {
-                    // TODO Auto-generated method stub
                     Toast.makeText(getApplicationContext(), "Test Error", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -587,7 +577,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
             @Override
             public void failure(RetrofitError arg0) {
-                // TODO Auto-generated method stub
 
             }
         });
@@ -616,7 +605,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
     }
 
     private void setReviewMode(boolean b) {
-        // TODO Auto-generated method stub
         isReviewModeActive = b;
         if ( isReviewModeActive )
         {
@@ -693,8 +681,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
             @Override
             public void failure(RetrofitError arg0) {
-                // TODO Auto-generated method stub
-
             }
         });
 
@@ -702,7 +688,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
     }
 
     protected void testIsReady(Test testObject) {
-        // TODO Auto-generated method stub
         this.test = testObject;
         ((SBApplication)getApplicationContext()).setTest(testObject);
         setPageTitle(0);
@@ -718,7 +703,6 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
             @Override
             public void onPageSelected(int position) {
-                // TODO Auto-generated method stub
                 currentPage = position;
                 setPageTitle(position);
                 if (position == test.getQuestions().length)
@@ -818,14 +802,10 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
 
             @Override
             public void onPageScrolled(int arg0, float arg1, int arg2) {
-                // TODO Auto-generated method stub
-
             }
 
             @Override
             public void onPageScrollStateChanged(int arg0) {
-                // TODO Auto-generated method stub
-
             }
         });
 

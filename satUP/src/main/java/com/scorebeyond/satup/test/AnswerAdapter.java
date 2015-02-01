@@ -110,12 +110,10 @@ public class AnswerAdapter extends ArrayAdapter<Answers> {
 	}
 
 	public void selectedItemChanged(int position) {
-		// TODO Auto-generated method stub
 		selectedItemIndex = position;
 	}
 
 	public void setQuestion(Questions question) {
-		// TODO Auto-generated method stub
 		this.question = question;
 	}
 

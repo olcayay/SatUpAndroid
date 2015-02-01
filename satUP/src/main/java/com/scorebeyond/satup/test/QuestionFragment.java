@@ -124,7 +124,6 @@ public class QuestionFragment extends Fragment {
     }
 
     private void prepareSolutionScreen() {
-        // TODO Auto-generated method stub
 
         for ( int i = 0; i < question.getSolution().length; i++)
         {
@@ -166,7 +165,6 @@ public class QuestionFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 if ( solutionWV.getVisibility() == View.VISIBLE )
                 {
                     hideOrShowTV.setText(getActivity().getResources().getString(R.string.show_step) + " " + (index + 1));
@@ -185,7 +183,6 @@ public class QuestionFragment extends Fragment {
     }
 
     protected void notifyActivityForSelection(int position) {
-        // TODO Auto-generated method stub
         ((SlidingMenuTestActivity)getActivity()).setSelection(questionIndex, position);
     }
 
@@ -221,13 +218,11 @@ public class QuestionFragment extends Fragment {
     */
 
     public void showSolution() {
-        // TODO Auto-generated method stub
         wrapperLayout.setVisibility(View.INVISIBLE);
         solutionLayout.setVisibility(View.VISIBLE);
     }
 
     public void showQuestion() {
-        // TODO Auto-generated method stub
         wrapperLayout.setVisibility(View.VISIBLE);
         solutionLayout.setVisibility(View.GONE);
 

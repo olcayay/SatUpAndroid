@@ -62,7 +62,6 @@ public class NavDrawerListAdapter extends BaseAdapter {
     }
 
     public void setActivity(SlidingMenuTestActivity slidingMenuTestActivity) {
-        // TODO Auto-generated method stub
         this.activity = slidingMenuTestActivity;
     }
 

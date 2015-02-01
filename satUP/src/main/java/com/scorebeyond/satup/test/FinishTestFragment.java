@@ -42,7 +42,6 @@ public class FinishTestFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 finishButtonAtFinishPageClicked();
             }
         });
@@ -57,7 +56,6 @@ public class FinishTestFragment extends Fragment {
 
     @Override
     public void onResume() {
-        // TODO Auto-generated method stub
         super.onResume();
         updateUnansweredText();
     }
@@ -141,7 +139,6 @@ public class FinishTestFragment extends Fragment {
     }
 
     public void setReviewMode(boolean reviewMode) {
-        // TODO Auto-generated method stub
         isReviewModeActive= reviewMode;
 
         if ( isReviewModeActive )

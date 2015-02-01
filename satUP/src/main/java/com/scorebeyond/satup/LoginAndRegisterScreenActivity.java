@@ -37,7 +37,6 @@
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
-            // TODO Auto-generated method stub
             super.onCreate(savedInstanceState);
 
     //		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -174,9 +173,7 @@
                 }
 
                 @Override
-                public void failure(RetrofitError arg0) {
-                    // TODO Auto-generated method stub
-
+                public void failure(RetrofitError arg0)
                 }
             });
         }
