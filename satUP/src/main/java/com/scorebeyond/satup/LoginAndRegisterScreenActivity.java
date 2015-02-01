@@ -163,7 +163,7 @@
                     Profile profile = WebServiceAdapter.getProfileObjectFromResponse(result);
                     if (  profile != null )
                     {
-                        Toast.makeText(getApplicationContext(), "Profiliniz olu�turuldu " + profile.getId(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Profiliniz oluşturuldu " + profile.getId(), Toast.LENGTH_SHORT).show();
                         gotoLoggedInUserFirstScreen();
                     }
                     else
@@ -194,7 +194,7 @@
                     {
                         saveUser(user);
                         createProfile();
-                        Toast.makeText(getApplicationContext(), "�You have successfully logged in! Welcome " + user.getUsername(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "You have successfully logged in! Welcome " + user.getUsername(), Toast.LENGTH_SHORT).show();
                     }
                     else
                     {

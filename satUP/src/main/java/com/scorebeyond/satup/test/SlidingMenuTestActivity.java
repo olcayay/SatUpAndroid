@@ -671,7 +671,7 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
                 if (  test != null )
                 {
                     testIsReady(test);
-                    Toast.makeText(getApplicationContext(), "Test olu�turuldu " + test.getTest_id(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Test oluşturuldu " + test.getTest_id(), Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
