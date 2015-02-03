@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@android:id/background">
+    <shape
+        android:innerRadiusRatio="3"
+        android:shape="ring"
+        android:useLevel="false"
+        android:thicknessRatio="7.0">
+        <solid android:color="#FF0000"/>
+    </shape>
+  </item>
+  <item android:id="@android:id/progress">
+    <shape
+        android:innerRadiusRatio="3"
+        android:shape="ring"
+        android:useLevel="false"
+        android:thicknessRatio="7.0">
+        <solid android:color="#00ff00"/>
+    </shape>
+  </item>
+</layer-list><!-- From: file:/Users/olcayay/AndroidStudioProjects/SatUpAndroid/satUP/src/main/res/drawable/progressbar_background.xml -->

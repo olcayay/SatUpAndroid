@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/progress">
+        <shape
+            android:innerRadiusRatio="2.5"
+            android:shape="ring"
+            android:thicknessRatio="10.0" >
+            <gradient
+                android:angle="120"
+                android:centerColor="#ECF0F1"
+                android:endColor="#ECF0F1"
+                android:startColor="#ECF0F1"
+                android:type="sweep" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <rotate
+    android:fromDegrees="270"
+    android:toDegrees="270"
+    android:pivotX="50%"
+    android:pivotY="50%" >
+        <shape
+            android:innerRadiusRatio="2.5"
+            android:shape="ring"
+            android:thicknessRatio="10.0" >
+            <gradient
+                android:angle="120"
+                android:centerColor="#3498DB"
+                android:endColor="#3498DB"
+                android:startColor="#3498DB"
+                android:type="sweep" />
+        </shape>
+        </rotate>
+    </item>
+
+</layer-list><!-- From: file:/Users/olcayay/AndroidStudioProjects/SatUpAndroid/satUP/src/main/res/drawable/circular_progress_bar.xml -->

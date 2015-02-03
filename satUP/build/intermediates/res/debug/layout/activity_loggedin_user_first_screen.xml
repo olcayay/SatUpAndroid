@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3498DB"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" >
+
+        <Spinner
+            android:id="@+id/question_number_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/create_test_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="createTest"
+            android:text="@string/customize_test"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/create_synonym_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="startSynonymGame"
+            android:text="@string/start_synonym_game"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/create_flashcard_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="startFlashCardGame"
+            android:text="@string/start_practice"
+            android:textColor="#ffffff" />
+
+
+        <TextView
+            android:id="@+id/currently_singedin_testview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="@string/currently_signedin"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/signout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="signoutButtonPressed"
+            android:text="@string/signout"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/Users/olcayay/AndroidStudioProjects/SatUpAndroid/satUP/src/main/res/layout/activity_loggedin_user_first_screen.xml -->

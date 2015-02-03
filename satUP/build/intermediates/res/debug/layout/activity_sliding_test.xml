@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testPageWrapperLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomLayout"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#EDEEF0"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C0C4C5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+                <Chronometer
+                    android:id="@+id/testChronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:textColor="#3598D9"
+                    android:textSize="24dp" />
+
+                <View
+                    android:id="@+id/edit_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_spad"
+                    android:onClick="notImplementedMethod" />
+
+                <View
+                    android:id="@+id/calculator_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/edit_view"
+                    android:background="@drawable/ic_calculator"
+                    android:onClick="notImplementedMethod" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reviewModeBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ECF0F1"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C0C4C5" />
+
+        <RelativeLayout
+            android:id="@+id/reviewModeBottomLayoutFirstRow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/show_solution_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="showSolutionClicked"
+                android:text="@string/show_solution"
+                android:textColor="#2980B9"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/dna_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_qdna"
+                android:onClick="notImplementedMethod"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/share_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_share"
+                android:onClick="notImplementedMethod"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/photo_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/share_view"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_ss"
+                android:onClick="notImplementedMethod"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C0C4C5" />
+
+        <RelativeLayout
+            android:id="@+id/reviewModeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="notImplementedMethod"
+                android:text="Review This Test With a Tutor"
+                android:textColor="#2980B9"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+        
+        <RelativeLayout
+            android:id="@+id/practice_ready_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="#3498DB"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/description_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/practice_ready"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/logo_imageview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/description_textview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/check" />
+
+            <Button
+                android:id="@+id/facebook_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_imageview"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/roundedbutton_greeen"
+                android:onClick="startPracticeButtonClicked"
+                android:text="@string/start_practice"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/practice_generating_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="#3498DB"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/description_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/practice_generating"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/logo_imageview"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/description_textview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp" />
+
+            <Button
+                android:id="@+id/facebook_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_imageview"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/roundedbutton_white"
+                android:onClick="cancelButtonClicked"
+                android:text="@string/cancel"
+                android:textColor="#3498DB" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout><!-- From: file:/Users/olcayay/AndroidStudioProjects/SatUpAndroid/satUP/src/main/res/layout/activity_sliding_test.xml -->
