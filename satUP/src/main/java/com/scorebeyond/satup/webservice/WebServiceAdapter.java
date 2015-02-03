@@ -15,11 +15,12 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
-import com.scorebeyond.satup.webservice.datamodel.FlashCardGameItem;
+import com.scorebeyond.satup.webservice.datamodel.flashcardgame.FlashCardGameItem;
 import com.scorebeyond.satup.webservice.datamodel.Profile;
-import com.scorebeyond.satup.webservice.datamodel.Test;
-import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
+import com.scorebeyond.satup.webservice.datamodel.test.Test;
+import com.scorebeyond.satup.webservice.datamodel.test.TestStatResult;
 import com.scorebeyond.satup.webservice.datamodel.User;
+import com.scorebeyond.satup.webservice.datamodel.vocabularygame.VocabularyGame;
 
 public class WebServiceAdapter {
 
@@ -136,4 +137,17 @@ public class WebServiceAdapter {
         return flashCardList;
     }
 
+    public static VocabularyGame getVocabularyGameFromResponse(Response result) {
+        VocabularyGame vocabularyGame = null;
+        try {
+            String bodyResponse = getResultBodyString(result);
+            Gson gson = new Gson();
+            vocabularyGame = gson.fromJson(( ((JsonObject) new JsonParser()
+                    .parse(bodyResponse)).get("result")), VocabularyGame.class);
+
+        } catch (Exception e) {
+        }
+
+        return vocabularyGame;
+    }
 }

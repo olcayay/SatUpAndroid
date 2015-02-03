@@ -2,8 +2,8 @@ package com.scorebeyond.satup.test;
 
 
 import com.scorebeyond.satup.R;
-import com.scorebeyond.satup.webservice.datamodel.Answers;
-import com.scorebeyond.satup.webservice.datamodel.Questions;
+import com.scorebeyond.satup.webservice.datamodel.test.Answers;
+import com.scorebeyond.satup.webservice.datamodel.test.Questions;
 
 import android.content.Context;
 import android.graphics.Color;

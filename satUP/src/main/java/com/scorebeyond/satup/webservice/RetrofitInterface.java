@@ -1,6 +1,7 @@
 package com.scorebeyond.satup.webservice;
 
-import com.scorebeyond.satup.webservice.datamodel.QuestionResultList;
+import com.scorebeyond.satup.webservice.datamodel.test.QuestionResultList;
+import com.scorebeyond.satup.webservice.datamodel.vocabularygame.VocabularyGameResult;
 
 import retrofit.Callback;
 import retrofit.client.Response;
@@ -46,5 +47,13 @@ public interface RetrofitInterface {
     @Headers("Content-Type: application/json")
     @GET("/v1/sat/{user_id}/flashcards")
     void getFlashCards(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Query("count") int count, @Query("mode") String mode, Callback<Response> callback);
+
+    @Headers("Content-Type: application/json")
+    @POST("/v1/sat/{user_id}/vocab")
+    void getVocabularyGame(@Header("X-Token") String security_token, @Path("user_id") String user_id, Callback<Response> callback);
+
+    @Headers("Content-Type: application/json")
+    @PUT("/v1/sat/{user_id}/vocab/{test_id}")
+    void sendVocabularyGameResult(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Path("test_id") String test_id, @Body VocabularyGameResult vocabularyGameResult, Callback<Response> callback);
 
 }

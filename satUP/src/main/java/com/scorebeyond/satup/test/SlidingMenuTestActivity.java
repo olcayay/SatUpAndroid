@@ -14,12 +14,12 @@ import com.scorebeyond.satup.SBApplication;
 import com.scorebeyond.satup.webservice.RetrofitInterface;
 import com.scorebeyond.satup.webservice.TestRequest;
 import com.scorebeyond.satup.webservice.WebServiceAdapter;
-import com.scorebeyond.satup.webservice.datamodel.Answers;
-import com.scorebeyond.satup.webservice.datamodel.QuestionResult;
-import com.scorebeyond.satup.webservice.datamodel.QuestionResultList;
-import com.scorebeyond.satup.webservice.datamodel.Questions;
-import com.scorebeyond.satup.webservice.datamodel.Test;
-import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
+import com.scorebeyond.satup.webservice.datamodel.test.Answers;
+import com.scorebeyond.satup.webservice.datamodel.test.QuestionResult;
+import com.scorebeyond.satup.webservice.datamodel.test.QuestionResultList;
+import com.scorebeyond.satup.webservice.datamodel.test.Questions;
+import com.scorebeyond.satup.webservice.datamodel.test.Test;
+import com.scorebeyond.satup.webservice.datamodel.test.TestStatResult;
 import com.scorebeyond.satup.webservice.datamodel.User;
 
 import android.app.AlertDialog;

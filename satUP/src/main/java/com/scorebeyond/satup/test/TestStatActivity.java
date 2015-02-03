@@ -2,9 +2,9 @@ package com.scorebeyond.satup.test;
 
 import com.scorebeyond.satup.R;
 import com.scorebeyond.satup.SBApplication;
-import com.scorebeyond.satup.webservice.datamodel.Cards;
-import com.scorebeyond.satup.webservice.datamodel.Subcells;
-import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
+import com.scorebeyond.satup.webservice.datamodel.cards.Cards;
+import com.scorebeyond.satup.webservice.datamodel.cards.Subcells;
+import com.scorebeyond.satup.webservice.datamodel.test.TestStatResult;
 
 import android.app.Activity;
 import android.app.AlertDialog;

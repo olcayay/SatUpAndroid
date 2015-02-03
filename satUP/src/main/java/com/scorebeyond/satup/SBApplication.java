@@ -6,8 +6,8 @@
 
     import com.google.gson.Gson;
     import com.scorebeyond.satup.webservice.RetrofitInterface;
-    import com.scorebeyond.satup.webservice.datamodel.Test;
-    import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
+    import com.scorebeyond.satup.webservice.datamodel.test.Test;
+    import com.scorebeyond.satup.webservice.datamodel.test.TestStatResult;
     import com.scorebeyond.satup.webservice.datamodel.User;
 
     import android.app.Application;

@@ -2,8 +2,8 @@ package com.scorebeyond.satup.test;
 
 import com.scorebeyond.satup.R;
 import com.scorebeyond.satup.SBApplication;
-import com.scorebeyond.satup.webservice.datamodel.Questions;
-import com.scorebeyond.satup.webservice.datamodel.Test;
+import com.scorebeyond.satup.webservice.datamodel.test.Questions;
+import com.scorebeyond.satup.webservice.datamodel.test.Test;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

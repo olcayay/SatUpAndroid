@@ -1,4 +1,4 @@
-package com.scorebeyond.satup.webservice.datamodel;
+package com.scorebeyond.satup.webservice.datamodel.flashcardgame;
 
 /**
  * Created by olcayay on 03/02/15.

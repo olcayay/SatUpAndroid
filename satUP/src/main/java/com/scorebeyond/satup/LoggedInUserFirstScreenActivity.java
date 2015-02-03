@@ -116,8 +116,7 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 
     public void startSynonymGame(View view)
     {
-        //Intent intent = new Intent(this,SynonymGameActivity.class);
-        Intent intent = new Intent(this,FlashCardActivity.class);
+        Intent intent = new Intent(this,SynonymGameActivity.class);
         startActivity(intent);
 
     }

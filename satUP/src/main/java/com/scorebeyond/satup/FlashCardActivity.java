@@ -2,8 +2,6 @@ package com.scorebeyond.satup;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.SeekBar;
 import android.widget.Toast;
 import android.view.View;
@@ -14,7 +12,7 @@ import retrofit.client.Response;
 
 import com.scorebeyond.satup.webservice.RetrofitInterface;
 import com.scorebeyond.satup.webservice.WebServiceAdapter;
-import com.scorebeyond.satup.webservice.datamodel.FlashCardGameItem;
+import com.scorebeyond.satup.webservice.datamodel.flashcardgame.FlashCardGameItem;
 import com.scorebeyond.satup.webservice.datamodel.User;
 
 import java.util.List;
