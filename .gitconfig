@@ -1,9 +1,0 @@
-[filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
-[user]
-	name = Olcay Ay
-	email = olcayay@gmail.com
-[core]
-	autocrlf = input
