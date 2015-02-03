@@ -31,8 +31,29 @@
             android:layout_height="wrap_content"
             android:background="@drawable/roundedbutton_blue"
             android:onClick="createTest"
-            android:text="@string/create_test"
+            android:text="@string/customize_test"
             android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/create_synonym_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="startSynonymGame"
+            android:text="@string/start_synonym_game"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/create_flashcard_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedbutton_blue"
+            android:onClick="startFlashCardGame"
+            android:text="@string/start_practice"
+            android:textColor="#ffffff" />
+
 
         <TextView
             android:id="@+id/currently_singedin_testview"

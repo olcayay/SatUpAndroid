@@ -10,14 +10,22 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
-        android:name="SBApplication"
+        android:name=".SBApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.scorebeyond.satup.FirstScreen"
+            android:name=".FirstScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HomeScreen" >
@@ -28,28 +36,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.scorebeyond.satup.LoginAndRegisterScreenActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"            
-            android:theme="@style/Theme.HomeScreen" >
-        </activity>
-        <activity
-            android:name="com.scorebeyond.satup.LoggedInUserFirstScreenActivity"
+            android:name=".LoginAndRegisterScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HomeScreen" >
         </activity>
         <activity
-            android:name="com.scorebeyond.satup.test.SlidingMenuTestActivity"
+            android:name=".LoggedInUserFirstScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HomeScreen" >
+        </activity>
+        <activity
+            android:name=".test.SlidingMenuTestActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.scorebeyond.satup.test.TestStatActivity"
+            android:name=".test.TestStatActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HomeScreen" >
         </activity>
-        </application>
+        <activity
+            android:name=".FlashCardActivity"
+            android:label="@string/title_activity_flash_card" >
+        </activity>
+        <activity
+            android:name=".SynonymGameActivity"
+            android:label="@string/title_activity_synonym_game" >
+        </activity>
+    </application>
 
 </manifest>

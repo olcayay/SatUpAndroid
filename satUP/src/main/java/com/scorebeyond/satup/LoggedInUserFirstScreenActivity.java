@@ -114,5 +114,18 @@ public class LoggedInUserFirstScreenActivity extends Activity{
 		return builder.create();
 	}
 
+    public void startSynonymGame(View view)
+    {
+        //Intent intent = new Intent(this,SynonymGameActivity.class);
+        Intent intent = new Intent(this,FlashCardActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void startFlashCardGame(View view)
+    {
+        Intent intent = new Intent(this,FlashCardActivity.class);
+        startActivity(intent);
+    }
 
 }

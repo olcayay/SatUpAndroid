@@ -15,6 +15,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+import com.scorebeyond.satup.webservice.datamodel.FlashCardGameItem;
 import com.scorebeyond.satup.webservice.datamodel.Profile;
 import com.scorebeyond.satup.webservice.datamodel.Test;
 import com.scorebeyond.satup.webservice.datamodel.TestStatResult;
@@ -26,25 +27,8 @@ public class WebServiceAdapter {
 
         User user = null;
         try {
-            BufferedReader reader;
-            StringBuilder sb = new StringBuilder();
-            try {
+            String bodyResponse = getResultBodyString(result);
 
-                reader = new BufferedReader(new InputStreamReader(result
-                        .getBody().in()));
-
-                String line;
-
-                try {
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } catch (IOException e) {
-                }
-            } catch (IOException e) {
-            }
-
-            String bodyResponse = sb.toString();
             Gson gson = new Gson();
             user = gson.fromJson(( ((JsonObject) new JsonParser()
                     .parse(bodyResponse)).get("result")), User.class);
@@ -56,29 +40,37 @@ public class WebServiceAdapter {
 
     }
 
+    private static String getResultBodyString(Response result) {
+
+        String bodyResponse = null;
+        BufferedReader reader;
+        StringBuilder sb = new StringBuilder();
+        try {
+
+            reader = new BufferedReader(new InputStreamReader(result
+                    .getBody().in()));
+
+            String line;
+
+            try {
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line);
+                }
+
+                bodyResponse = sb.toString();
+            } catch (IOException e) {
+            }
+        } catch (IOException e) {
+        }
+
+        return bodyResponse;
+    }
+
     public static Profile getProfileObjectFromResponse(Response result) {
 
         Profile profile = null;
         try {
-            BufferedReader reader;
-            StringBuilder sb = new StringBuilder();
-            try {
-
-                reader = new BufferedReader(new InputStreamReader(result
-                        .getBody().in()));
-
-                String line;
-
-                try {
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } catch (IOException e) {
-                }
-            } catch (IOException e) {
-            }
-
-            String bodyResponse = sb.toString();
+            String bodyResponse = getResultBodyString(result);
             Gson gson = new Gson();
             profile = gson
                     .fromJson(( ((JsonObject) new JsonParser()
@@ -95,25 +87,7 @@ public class WebServiceAdapter {
 
         Test test = null;
         try {
-            BufferedReader reader;
-            StringBuilder sb = new StringBuilder();
-            try {
-
-                reader = new BufferedReader(new InputStreamReader(result
-                        .getBody().in()));
-
-                String line;
-
-                try {
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } catch (IOException e) {
-                }
-            } catch (IOException e) {
-            }
-
-            String bodyResponse = sb.toString();
+            String bodyResponse = getResultBodyString(result);
             Gson gson = new Gson();
             test = gson.fromJson(( ((JsonObject) new JsonParser()
                     .parse(bodyResponse)).get("result")), Test.class);
@@ -127,47 +101,16 @@ public class WebServiceAdapter {
     public static TestStatResult getTestStatResultFromResponse(Response result) {
         TestStatResult testStat = null;
         try {
-            BufferedReader reader;
-            StringBuilder sb = new StringBuilder();
-            try {
-
-                reader = new BufferedReader(new InputStreamReader(result
-                        .getBody().in()));
-
-                String line;
-
-                try {
-                    while ((line = reader.readLine()) != null) {
-                        sb.append(line);
-                    }
-                } catch (IOException e) {
-                }
-            } catch (IOException e) {
-            }
-
-            String bodyResponse = sb.toString();
+            String bodyResponse = getResultBodyString(result);
             Gson gson = new Gson();
 
-//			ArrayList<TestStatResult> testStatResultArrayList = new ArrayList<TestStatResult>();
-//			List<TestStatResult> list = gson.fromJson(((JsonArray) ((JsonObject) new JsonParser()
-//			.parse(bodyResponse)).get("result")), testStatResultArrayList.getClass());
-//			
-//			if ( list.size() > 0 )
-//				testStat = list.get(0);
-
-            //Gson gson = new Gson();
-            //String jsonString = "[{\"id\":18,\"city\":\"test\",\"street\":\"test 1\",\"zipcode\":121209,\"state\":\"IL\",\"lat\":32.158138,\"lng\":34.807838},{\"id\":19,\"city\":\"test\",\"street\":\"1\",\"zipcode\":76812,\"state\":\"IL\",\"lat\":32.161041,\"lng\":34.810410}]";
             Type type = new TypeToken<List<TestStatResult>>(){}.getType();
-            List<TestStatResult> data =  gson.fromJson(((JsonArray) ((JsonObject) new JsonParser()
-                    .parse(bodyResponse)).get("result")), type);
+            List<TestStatResult> data =  gson.fromJson((JsonArray) ((JsonObject) new JsonParser()
+                    .parse(bodyResponse)).get("result"), type);
 
-            if ( data.size() > 0 )
+            if ( data.size() > 0 ) {
                 testStat = data.get(0);
-			
-			/*
-			testStat = gson.fromJson(((JsonObject) ((JsonObject) new JsonParser()
-					.parse(bodyResponse)).get("result")), TestStatResult.class);
-			*/
+            }
         }
         catch (Exception e) {
             Log.e("SB", e.getMessage());
@@ -175,4 +118,22 @@ public class WebServiceAdapter {
 
         return testStat;
     }
+
+    public static List<FlashCardGameItem> getFlashCardItemsFromResponse(Response result) {
+        List<FlashCardGameItem> flashCardList = null;
+        try {
+            String bodyResponse = getResultBodyString(result);
+            Gson gson = new Gson();
+
+            Type type = new TypeToken<List<FlashCardGameItem>>(){}.getType();
+            flashCardList =  gson.fromJson((JsonArray) ((JsonObject) new JsonParser()
+                    .parse(bodyResponse)).get("result"), type);
+        }
+        catch (Exception e) {
+            Log.e("SB", e.getMessage());
+        }
+
+        return flashCardList;
+    }
+
 }

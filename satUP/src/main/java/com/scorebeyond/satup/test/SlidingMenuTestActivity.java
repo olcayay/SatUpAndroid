@@ -566,7 +566,7 @@ public class SlidingMenuTestActivity extends ActionBarActivity {
                 TestStatResult testStatResult = WebServiceAdapter.getTestStatResultFromResponse(result);
                 if (  testStatResult != null )
                 {
-                    Toast.makeText(getApplicationContext(), "Test sonu�lar� al�nd� " + test.getTest_id(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Test sonuçları alındı " + test.getTest_id(), Toast.LENGTH_SHORT).show();
                     testStatIsReady(testStatResult);
                 }
                 else

@@ -11,6 +11,7 @@ import retrofit.http.Headers;
 import retrofit.http.POST;
 import retrofit.http.PUT;
 import retrofit.http.Path;
+import retrofit.http.Query;
 
 public interface RetrofitInterface {
 
@@ -41,5 +42,9 @@ public interface RetrofitInterface {
     @Headers("Content-Type: application/json")
     @GET("/v1/sat/{user_id}/test/{test_id}/stats")
     void getTestStat(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Path("test_id") String test_id, Callback<Response> callback);
+
+    @Headers("Content-Type: application/json")
+    @GET("/v1/sat/{user_id}/flashcards")
+    void getFlashCards(@Header("X-Token") String security_token, @Path("user_id") String user_id, @Query("count") int count, @Query("mode") String mode, Callback<Response> callback);
 
 }
